@@ -16,10 +16,10 @@ CERTAMEN2-BI/
 |   |-- modelo-dimensional/    # Diagrama del modelo Estrella
 |   `-- presentacion/          # Presentación del proyecto 
 |-- database/ 
-|   |-- scripts/               # Scripts DDL (CREATE TABLE) y consultas de extracción
+|   |-- scripts/               # Scripts DDL (CREATE TABLE)
 |   `-- backup/                # Respaldos (.bak) de la BD transaccional y dimensional
 |-- etl/ 
-|   `-- proyecto-ssis/         # Solución de Visual Studio con paquetes SSIS (.dtsx)
+|   `-- proyecto-ssis/         # ETL SSIS (.dtsx)
 ```
 
 ---
