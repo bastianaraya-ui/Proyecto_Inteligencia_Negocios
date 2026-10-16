@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ABBA</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAyHZZnf2SECOiZiPDmHZcgAAAAACAAAAAAAQZgAAAAEAACAAAAAD86e8sv0njupgp/rkVEOEHEdaf+Wo/NRR6FbyRfjnrwAAAAAOgAAAAAIAACAAAAAgsFyZUZGzaPaNQIs507C1dvDVlvnW2u9q6dOfZiEhhJAAAAABleD5BM4HFEthxPRlGlrJ6V8j+GAujbRyRDOpXE2gbcuqnbYn/nT5ConaKm06cU8ZkYl22oQ1Iwt772/7GLJaRP43ETgUSBT+ecnyDnNiVJoC7XqmdG4ylOpHgJtvEVRhIVOmBkKXlBkawVVLMzlqvVNgUchXhPxnTMzyZ4nDnArU8PXPQ4hyKMPeHK60SVdAAAAAdT8k9YmRrz3linf5FdiPvX5r2jGTfmnRy9CgGAAvwMLB7zTiXyl7DCcmtSbXNCJvOV8ijKXDpcuU/pvD06ggNw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAyHZZnf2SECOiZiPDmHZcgAAAAACAAAAAAAQZgAAAAEAACAAAAC+ed7VoJhgoOkTiYYEOUE9lTXItRX1yXtsNxam25y+lgAAAAAOgAAAAAIAACAAAACwpWbkzowaXlU9bitl9d8qr3d+D9c4sYSInchNHakwEpAAAABwXugJF12Pmd6cdivT6J8SgrJT8jPbWEUWzp87clB2NS+qNguMmxUjE2LJl+5OV0RC+gTxv6nVRkE200gn0px8XQqjqwP2JGmBiziz2Hsv2oWJJWYewPEtRd03muX9/IjkgFU+ShyBn27PWTE2EJGX0i4lBaS3mZjXGamzlIVNta5p4k4QQM672LPv5+JEFzBAAAAAMDZLY4LlWq9hAdO8nLlRf70a8ILJ4rNRCxDe7ksiHgepJq3n/OgixaT3IIH38InaDHX/wFczZTkerAsnC9+8Lg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -35,7 +35,7 @@
           <SSIS:Package SSIS:Name="DIM_CLIENTE.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DIM_TERRITORIO.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FACT_VENTAS_BIKEZ.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Package1.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="TRUNCATE_MODELO.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -379,10 +379,10 @@
                 <SSIS:Property SSIS:Name="Name">DIM_CLIENTE</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{BAA67B93-5FD0-4496-A467-4F6384E6D8C1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{98C1D52B-34EE-4E05-B27A-B9F94A0F5548}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -871,16 +871,16 @@
                 </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Package1.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="TRUNCATE_MODELO.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{620B7E5D-0158-4DBE-B936-9B2B5569DD47}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{E482BE3E-8FD7-43D3-8592-A9E8A5879FE3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">TRUNCATE_MODELO</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">5</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{1D440ABD-B4C4-4380-9D84-0CC9C117DED5}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E6FEED06-CC96-4738-8E11-840836B5B695}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

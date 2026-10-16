@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>BikeZ</Name>
-    <LastWriteTime>2026-10-15T23:55:52.8211595Z</LastWriteTime>
+    <LastWriteTime>2026-10-16T00:01:09.9596731Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -18,7 +18,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DIM_CLIENTE.dtsx</Name>
-      <LastWriteTime>2026-10-15T20:36:12.5939262Z</LastWriteTime>
+      <LastWriteTime>2026-10-16T02:27:38.5915459Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -32,8 +32,8 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>Package1.dtsx</Name>
-      <LastWriteTime>2026-10-15T23:55:52.7796303Z</LastWriteTime>
+      <Name>TRUNCATE_MODELO.dtsx</Name>
+      <LastWriteTime>2026-10-16T02:25:07.0219126Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

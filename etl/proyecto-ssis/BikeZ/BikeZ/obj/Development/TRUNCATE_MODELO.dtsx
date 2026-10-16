@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="10/15/2026 8:54:42 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="13322"
   DTS:ObjectName="TRUNCATE_MODELO"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{472DD8F3-8C67-48B3-876B-15E8628FACD7}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{E6FEED06-CC96-4738-8E11-840836B5B695}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -45,7 +45,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D012C808-FA2E-48FE-9640-B8790CB04476}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE DIM_CLIENTE;&#xA;TRUNCATE TABLE DIM_EMPLEADO;&#xA;TRUNCATE TABLE DIM_PRODUCTO;&#xA;TRUNCATE TABLE DIM_TERRITORIO;&#xA;TRUNCATE TABLE FACT_VENTAS_BIKEZ;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE FROM FACT_VENTAS_BIKEZ;&#xA;DELETE FROM DIM_CLIENTE;&#xA;DELETE FROM DIM_EMPLEADO;&#xA;DELETE FROM DIM_PRODUCTO;&#xA;DELETE FROM DIM_TERRITORIO;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
