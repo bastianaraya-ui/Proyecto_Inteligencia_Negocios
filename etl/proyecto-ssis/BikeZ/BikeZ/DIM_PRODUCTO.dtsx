@@ -1,0 +1,496 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/15/2026 4:45:07 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ABBA"
+  DTS:CreatorName="ABBA\araya"
+  DTS:DTSID="{A3DB8426-A704-4777-B270-1C05A166C515}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.521.0"
+  DTS:LocaleID="13322"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{7061F017-6986-4A14-BFD0-D5E7BE546D76}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ABBA.BikeZ]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C3AFF8EC-D288-4E3F-9FD5-382486C180E0}"
+      DTS:ObjectName="ABBA.BikeZ">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ABBA;Initial Catalog=BikeZ;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Cargar Dim_Producto"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B34B692A-03A9-464E-A22A-84E967F8EBA9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar Dim_Producto"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Cargar Dim_Producto\DIM_PRODUCTO"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DIM_PRODUCTO"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DIM_PRODUCTO]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ABBA.BikeZ]"
+                  connectionManagerRefId="Package.ConnectionManagers[ABBA.BikeZ]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].Columns[cod_producto]"
+                      cachedDataType="i4"
+                      cachedName="cod_producto"
+                      externalMetadataColumnId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].ExternalColumns[cod_producto]"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[cod_producto]" />
+                    <inputColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].Columns[nom_producto]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="nom_producto"
+                      externalMetadataColumnId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].ExternalColumns[nom_producto]"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[nom_producto]" />
+                    <inputColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].Columns[nom_color]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="nom_color"
+                      externalMetadataColumnId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].ExternalColumns[nom_color]"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[nom_color]" />
+                    <inputColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].Columns[cod_categoria]"
+                      cachedDataType="i4"
+                      cachedName="cod_categoria"
+                      externalMetadataColumnId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].ExternalColumns[cod_categoria]"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[cod_categoria]" />
+                    <inputColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].Columns[nom_categoria]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="nom_categoria"
+                      externalMetadataColumnId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].ExternalColumns[nom_categoria]"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[nom_categoria]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].ExternalColumns[sk_producto]"
+                      dataType="i4"
+                      name="sk_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].ExternalColumns[cod_producto]"
+                      dataType="i4"
+                      name="cod_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].ExternalColumns[nom_producto]"
+                      dataType="wstr"
+                      length="100"
+                      name="nom_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].ExternalColumns[nom_color]"
+                      dataType="wstr"
+                      length="50"
+                      name="nom_color" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].ExternalColumns[cod_categoria]"
+                      dataType="i4"
+                      name="cod_categoria" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input].ExternalColumns[nom_categoria]"
+                      dataType="wstr"
+                      length="100"
+                      name="nom_categoria" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar Dim_Producto\Productos BikeZ"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Productos BikeZ"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+ProductoID cod_producto,
+Producto nom_producto, 
+Color nom_color, 
+PROD.CategoriaID cod_categoria,
+Categoria nom_categoria
+FROM [BikeZ].[dbo].[Productos] PROD LEFT JOIN [BikeZ].[dbo].[Categorias] CAT
+ON PROD.CategoriaID = CAT.CategoriaID</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Dim_Producto\Productos BikeZ.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ABBA.BikeZ]"
+                  connectionManagerRefId="Package.ConnectionManagers[ABBA.BikeZ]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[cod_producto]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].ExternalColumns[cod_producto]"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[cod_producto]"
+                      name="cod_producto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[nom_producto]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].ExternalColumns[nom_producto]"
+                      length="50"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[nom_producto]"
+                      name="nom_producto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[nom_color]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].ExternalColumns[nom_color]"
+                      length="15"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[nom_color]"
+                      name="nom_color"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[cod_categoria]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].ExternalColumns[cod_categoria]"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[cod_categoria]"
+                      name="cod_categoria"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[nom_categoria]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].ExternalColumns[nom_categoria]"
+                      length="50"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].Columns[nom_categoria]"
+                      name="nom_categoria"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].ExternalColumns[cod_producto]"
+                      dataType="i4"
+                      name="cod_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].ExternalColumns[nom_producto]"
+                      dataType="wstr"
+                      length="50"
+                      name="nom_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].ExternalColumns[nom_color]"
+                      dataType="wstr"
+                      length="15"
+                      name="nom_color" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].ExternalColumns[cod_categoria]"
+                      dataType="i4"
+                      name="cod_categoria" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output].ExternalColumns[nom_categoria]"
+                      dataType="wstr"
+                      length="50"
+                      name="nom_categoria" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[cod_producto]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[cod_producto]"
+                      name="cod_producto" />
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[nom_producto]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[nom_producto]"
+                      name="nom_producto" />
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[nom_color]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[nom_color]"
+                      name="nom_color" />
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[cod_categoria]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[cod_categoria]"
+                      name="cod_categoria" />
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[nom_categoria]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[nom_categoria]"
+                      name="nom_categoria" />
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Cargar Dim_Producto.Paths[OLE DB Source Output]"
+              endId="Package\Cargar Dim_Producto\DIM_PRODUCTO.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Cargar Dim_Producto\Productos BikeZ.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Cargar Dim_Producto"
+          TopLeft="360.833318995106,55.4666671074762" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Cargar Dim_Producto">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Cargar Dim_Producto\Productos BikeZ"
+          TopLeft="374.999985098839,78.0000006198883" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Cargar Dim_Producto\DIM_PRODUCTO"
+          TopLeft="369.166651997302,187.200001487732" />
+        <EdgeLayout
+          Id="Package\Cargar Dim_Producto.Paths[OLE DB Source Output]"
+          TopLeft="451.283318548071,119.600000619888">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,67.6000008678437"
+              Start="0,0"
+              End="0,60.1000008678437">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.1000008678437" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Dim_Producto\DIM_PRODUCTO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Dim_Producto\Productos BikeZ">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
