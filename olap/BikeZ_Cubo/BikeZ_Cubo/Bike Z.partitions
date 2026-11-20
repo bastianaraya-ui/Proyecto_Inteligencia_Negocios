@@ -1,0 +1,125 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b6bc40c5-4a25-4949-a969-42c80f0508d4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Bike Z</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>DIM EMPLEADO</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="fcc64f54-dcb9-41d3-8a3b-d7a8fcc7f001">
+          <ID>DIM EMPLEADO</ID>
+          <Name>DIM EMPLEADO</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="3867323b-64ae-49eb-a72c-a5ee4a62a794">
+            <DataSourceViewID>Bike Z</DataSourceViewID>
+            <TableID>dbo_DIM_EMPLEADO</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>DIM CLIENTE</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d97d14ca-1de7-4516-aaf0-f576a730e6cd">
+          <ID>DIM CLIENTE</ID>
+          <Name>DIM CLIENTE</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9976f5ef-67a5-4838-90d5-760d6ec410e3">
+            <DataSourceViewID>Bike Z</DataSourceViewID>
+            <TableID>dbo_DIM_CLIENTE</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>DIM FECHA</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a1a9279c-57f2-4dcb-a438-14e4d2d72626">
+          <ID>DIM FECHA</ID>
+          <Name>DIM FECHA</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="46003bf0-f2c0-42f0-b887-76d0dc58a98e">
+            <DataSourceViewID>Bike Z</DataSourceViewID>
+            <TableID>dbo_DIM_FECHA</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>DIM PRODUCTO</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="57c55a65-7bc3-4ddb-b1e6-22621710f9a6">
+          <ID>DIM PRODUCTO</ID>
+          <Name>DIM PRODUCTO</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d782a512-0a48-4266-82cf-02496782335b">
+            <DataSourceViewID>Bike Z</DataSourceViewID>
+            <TableID>dbo_DIM_PRODUCTO</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>DIM TERRITORIO</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="4928c433-1123-4b50-9791-451744c4530f">
+          <ID>DIM TERRITORIO</ID>
+          <Name>DIM TERRITORIO</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="f85f928d-a3ce-46ad-a53c-58ad83cb0dec">
+            <DataSourceViewID>Bike Z</DataSourceViewID>
+            <TableID>dbo_DIM_TERRITORIO</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>FACT VENTAS BIKEZ</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="bf351a11-0643-4007-9695-f6542a7e4d3c">
+          <ID>FACT VENTAS BIKEZ</ID>
+          <Name>FACT VENTAS BIKEZ</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="27e74356-a2d6-491b-8dc1-6f1793e29f93">
+            <DataSourceViewID>Bike Z</DataSourceViewID>
+            <TableID>dbo_FACT_VENTAS_BIKEZ</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>
